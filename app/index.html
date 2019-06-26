@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="styles/bundle.css">
+</head>
+<body id="body">
+	<section>
+		<a href="#" class="return">&#8592; вернуться</a>
+		<img src="images/maxresdefault-compressor.png" class="center">
+		<form class="center">
+			<input type="text" name="phone" placeholder="Номер телефона" id="input__phone" required pattern="\d{1}\ (\d{3}\) \d{3}\-\d{2}\-\d{2}\">
+			<span id="phoneControl">&#10004;</span>
+			<input type="password" name="password" class="input__transparent" placeholder="Пароль" id="input__password" required>
+			<aside>
+				<div class="checkbox">
+					<input type="checkbox" name="remember" class="input__transparent" id="remember">
+					<label for="remember">Запомнить</label>
+				</div>
+				<a href="#">Забыл пароль</a>
+			</aside>
+			<input type="submit" name="submit" value="войти" class="input__transparent" id="submit">
+		</form>
+	</section>
+<script type="text/javascript" src="./scripts/app.js"></script>
+</body>
+</html>

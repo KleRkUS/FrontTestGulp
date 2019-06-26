@@ -1,0 +1,235 @@
+@import "fonts";
+@import "variables";
+
+button[type="submit"] {
+	font-family: "HelveticaNeueCyr";
+	font-weight: 500;
+	font-style: normal;
+}
+
+html, body {
+	font-size: $defaultFontSize;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	background-image: $backgroundImageLarge;
+	background-size: 116% 106%;
+	background-position: 50% 0%;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	-webkit-align-items: center;
+	        align-items: center;
+	border-radius: 0.5em;
+	padding: 2.0625em 1.875em;
+	width: 47%;
+	background: $backgroundImageSmall;
+	background-size: cover!important;
+	box-shadow: 0px 0.125em 2em rgba(0, 0, 0, 0.5);
+}
+
+a {
+	text-align: left;
+	color: $lightColor;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+section img {
+	width: 6.0675em;
+	clip-path: circle(48.5px at center);
+	margin-bottom: 1.375em;
+}
+
+.return {
+	margin-bottom: 0.3em;
+	width: 100%;
+}
+
+form {
+	width: 60%;
+}
+
+.phone__correct {
+	background: transparent!important;
+	transition: all .2s ease-in-out;
+	color: #fff!important;
+}
+
+.phone__invalid {
+	color: red;
+}
+
+.phone__invalid ~ span {
+	background: red;
+	padding: .1em .5em;
+	-webkit-border-radius: 	2em;
+	        border-radius: 	2em;
+	font-family: 'HelveticaNeueCyr';
+	font-weight: bold;
+	font-style: normal;
+}
+
+input::placeholder, input[type="text"], input[type="password"] {
+	font-size: $largeFontSize;
+}
+
+input[type="text"] {
+	background: $lightColor;
+	border: none;
+	border: 0.06em solid #fff;
+	transition: all .2s ease-in-out;
+}
+
+input[type="text"] ~ span {	
+	position: relative;	
+	bottom: 2.3em;
+	left: 10em;
+	color: #fff;
+	font-size: 	1em;
+}
+
+input[type="password"] {
+	margin-top: 1em;
+	margin-bottom: 1.277em;
+	font-size: $extraLargeFontSize;
+	padding: 0.16em 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.56em;
+	&::-webkit-input-placeholder {
+		transform: scale(0.51);
+	}
+	&::-moz-placeholder {
+		transform: scale(0.51);
+	}
+	&::-ms-input-placeholder {
+		transform: scale(0.51);
+	}
+	&::placeholder {
+		transform: scale(0.51);
+	}
+	&:focus, &:checked {
+		background: $lightColor;
+		color: #000;
+		&::placeholder {
+			color: transparent;
+		}
+	}
+}
+
+input[type="submit"] {
+	font-size: $smallFontSize;
+	border: 0.083em solid #fff;
+	width: 12.583em;
+	padding: 1.416em 0 1.416em 0;
+	text-transform: uppercase;
+	opacity: .2;
+	margin-top: 1.4375em;
+	transition: all .2s ease-in-out;
+	&[data-active="true"] {
+		opacity: 1;
+	}
+}
+
+.active {
+	opacity: 1;
+}
+
+.input__transparent {
+	background: transparent;
+	border: 0.0286em solid #fff;
+	color: $lightColor;
+}
+
+input {
+	border-radius: 2em;
+	padding: 0.73em 0;
+	width: 100%;
+	text-align: center;
+	border: none;
+}
+
+.center {
+	text-align: center;
+	-webkit-align-self: center;
+	        align-self: center;
+}
+
+aside {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+
+aside, input[type="text"]::placeholder, input[type="text"], input[type="password"]::placeholder, .return {
+	font-family: "HelveticaNeueCyr";
+	font-style: normal;
+	font-weight: normal;
+}
+
+input[type="password"] {
+	font-family: "HelveticaNeueCyr";
+	font-weight: 300;
+	font-style: normal;
+}
+
+.checkbox{
+	vertical-align: middle;
+	input {
+		display: none;
+	}
+	label {
+		&:before {
+			height: 1em;
+			box-sizing: content-box;
+			width: 2.625em;
+			background: transparent;
+			padding: 0.200em 0.0625em 0.200em 0.0625em;
+			margin-right: .2em;
+		}
+		&:after {
+			right: 8em;
+			height: 1em;
+			width: 1.375em;
+			background: $lightColor;
+			transition: all .2s ease-in-out;
+		}
+		&:after, &:before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			position: relative;
+			bottom: .1em;
+			border: 1px solid $lightColor;
+			border-radius: 1.5em;
+			opacity: .4;
+			cursor: pointer;
+		}
+	}
+	input:checked { 
+		&~label:after {
+			right: 7em;
+			opacity: 1;
+		}
+		&~label:before {
+			opacity: 1;
+		}
+	}
+	* {
+		transition: all .2s ease-in-out;
+		color: $lightColor;
+		width: auto;
+		display: inline-block;
+	}
+
+}
